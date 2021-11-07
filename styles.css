@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -17,158 +19,135 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: 80vh;
-    width: 75%;
-    background-image:linear-gradient(90deg, rgba(9, 1, 104,0.7),rgba(118, 0, 134,0.9));
+    height: 60vh;
+    width: 60%;
+    background-image:linear-gradient(90deg, rgba(118, 0, 134,0.9), rgba(9, 1, 104,0.7));
     border-radius: 15px;
     z-index: 1;
     top: 50%;
-    left: 11%;
+    margin-left: 20%;
     transform: translateY(-50%);
-    box-shadow: 5px 5px 10px rgba(9,9,9,0.3);
+    box-shadow: 5px 10px 10px rgba(9,9,9,0.3);
 }
-/*
-.div {
+.table:hover{
+    animation: rotate 1s ease;
+}
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7,
+.div8 {
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    background-color: #e90101;
     width: 100px;
     height: 100px;
-    top: 40%;
-    left: 40%;
-    opacity: 0.8;
-    animation: 
-    */
-.div2 {
-    display: flex;
-    position: absolute;
-    align-items: center;
     mix-blend-mode: color;
-    justify-content: center;
+    border-radius: 50px;
+}
+.div2 {
     background: linear-gradient(rgba(0, 59, 168, 0.8), rgba(120, 0, 168, 0.8));
-    width: 100px;
-    height: 100px;
     top: 10%;
     left: 47%;
     animation: move 40s -13s infinite ease-in-out alternate;
-    border-radius: 50px;
     filter: blur(5px)
 }
 .div3 {
-    display: flex;
-    position: absolute;
-    mix-blend-mode: color;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(103, 209, 41, 0.8), rgba(120,0,168,0.8));
-    width: 100px;
-    height: 100px;
     top: 50%;
     left: 35%;
     animation: move 40s -10s infinite ease-in-out alternate;
-    border-radius: 50px;
     filter: blur(5px)
 }
 .div4 {
-    display: flex;
-    mix-blend-mode: color;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(131, 0, 0, 0.8), rgba(120,0,168,0.8));
-    width: 100px;
-    height: 100px;
     top: 55%;
     filter: blur(5px);
     left: 49%;
     animation: move 40s -14s infinite ease-in-out alternate-reverse;
-    border-radius: 50px;
 }
 .div5 {
-    display: flex;
-    mix-blend-mode: color;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(175, 149, 1, 0.8), rgba(120,0,168,0.8));
-    width: 100px;
     filter: blur(8px);
-    height: 100px;
     top: 43%;
     left: 60%;
     animation: move 40s -23s infinite ease-in-out alternate;
-    border-radius: 50px;
 }
 .div6 {
-    display: flex;
-    mix-blend-mode: color;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(48, 137, 172, 0.8), rgba(120,0,168,0.8));
-    width: 100px;
     filter: blur(8px);
-    height: 100px;
     top: 55%;
     left: 34%;
     animation: move 40s -21s infinite ease-in-out alternate;
-    border-radius: 50px;
 }
 .div7 {
-    display: flex;
-    mix-blend-mode: color;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(109, 70, 116, 0.8), rgba(255, 255, 255, 0.8));
-    width: 100px;
     filter: blur(8px);
-    height: 100px;
     top: 50%;
     left: 77%;
     animation: move2 40s -23s infinite ease-in-out alternate-reverse;
-    border-radius: 50px;
 }
 .div8 {
-    display: flex;
-    mix-blend-mode: color;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(rgba(5, 0, 82, 0.8), rgba(120,0,168,0.8));
-    width: 100px;
-    height: 100px;
     top: 10%;
     filter: blur(8px);
     right: 39%;
     animation: move2 40s -11s infinite ease-in-out alternate-reverse;
-    border-radius: 50px;
-}
-.div4:hover {
-    animation: rotate2 5s infinite;
 }
 
-.let {
-    color: transparent;
-    font-size: 2rem;
+.title, 
+.name,
+.number,
+.logo,
+.chip {
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
     word-wrap: normal;
     overflow-wrap: break-word;
+    display: flex;
+    font-size: 2rem;
+    position: absolute;
+    width: 300px;
 }
-
+.title {
+    top: 1.5rem;
+    left: 2rem;
+}
+.name {
+    left: 2rem;
+}
+.number {
+    left: 2rem;
+    bottom: 1rem;
+    width: 500px;
+}
+.logo {
+    top: 0.2rem;
+    right: 40px;
+    color:rgba(255, 255, 255, 0.8);
+    width: 150px;
+    height: 150px;
+}
+/*
+.chip {
+    right: 40px;
+    top: 9rem;
+    width: 80px;
+    height: 80px;
+    color: white;
+    background-color: yellow;
+}
+*/
 @keyframes rotate {
     0% {
-        transform: perspective(120px)
+        transform: scale(1)
         rotateX(0deg) rotateY(0deg);
     }
-    50% {
-        transform: perspective(120px)
-        rotateX(-180.1deg) rotateY(0deg)
-    }
     100% {
-        transform: perspective(120px)
-        rotateX(-180deg) rotateY(-179.9deg);
+        transform: rotateY(-180deg);
     }
 }
 
@@ -208,5 +187,3 @@ body {
         transform: rotate(340deg) scale(1.2) translateX(-110px);
     }
 }
-
-/*mix-blend-mode: screen;*/
