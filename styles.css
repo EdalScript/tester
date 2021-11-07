@@ -3,12 +3,31 @@
 }
 body {
     margin: 0;
+    color: transparent;
+    background: #123;
 }
+.container {
+    height: 100vh;
+    width: 100%;
+    filter:saturate(50%);
 
-div {
-    border-radius: 25px;
 }
-
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 80vh;
+    width: 75%;
+    background-image:linear-gradient(90deg, rgba(9, 1, 104,0.7),rgba(118, 0, 134,0.9));
+    border-radius: 15px;
+    z-index: 1;
+    top: 50%;
+    left: 11%;
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 10px rgba(9,9,9,0.3);
+}
+/*
 .div {
     display: flex;
     position: absolute;
@@ -20,50 +39,120 @@ div {
     top: 40%;
     left: 40%;
     opacity: 0.8;
-    animation: rotate 4.2s infinite ease-in-out;
-}
+    animation: 
+    */
 .div2 {
     display: flex;
     position: absolute;
     align-items: center;
+    mix-blend-mode: color;
     justify-content: center;
-    background-color: #0011ff;
+    background: linear-gradient(rgba(0, 59, 168, 0.8), rgba(120, 0, 168, 0.8));
     width: 100px;
     height: 100px;
-    top: 43%;
+    top: 10%;
     left: 47%;
-    opacity: 0.8;
-    animation: rotate 2.2s infinite ease-in-out;
+    animation: move 40s -13s infinite ease-in-out alternate;
+    border-radius: 50px;
+    filter: blur(5px)
 }
 .div3 {
     display: flex;
     position: absolute;
+    mix-blend-mode: color;
     align-items: center;
     justify-content: center;
-    background-color: #ffd000;
+    background: linear-gradient(rgba(103, 209, 41, 0.8), rgba(120,0,168,0.8));
     width: 100px;
     height: 100px;
     top: 50%;
     left: 35%;
-    opacity: 0.8;
-    animation: rotate 0.3s infinite ease-in-out;
+    animation: move 40s -10s infinite ease-in-out alternate;
+    border-radius: 50px;
+    filter: blur(5px)
 }
 .div4 {
     display: flex;
+    mix-blend-mode: color;
     position: absolute;
     align-items: center;
     justify-content: center;
-    background-color: #16ff01;
+    background: linear-gradient(rgba(131, 0, 0, 0.8), rgba(120,0,168,0.8));
     width: 100px;
     height: 100px;
     top: 55%;
+    filter: blur(5px);
     left: 49%;
-    opacity: 0.8;
+    animation: move 40s -14s infinite ease-in-out alternate-reverse;
+    border-radius: 50px;
+}
+.div5 {
+    display: flex;
+    mix-blend-mode: color;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(175, 149, 1, 0.8), rgba(120,0,168,0.8));
+    width: 100px;
+    filter: blur(8px);
+    height: 100px;
+    top: 43%;
+    left: 60%;
+    animation: move 40s -23s infinite ease-in-out alternate;
+    border-radius: 50px;
+}
+.div6 {
+    display: flex;
+    mix-blend-mode: color;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(48, 137, 172, 0.8), rgba(120,0,168,0.8));
+    width: 100px;
+    filter: blur(8px);
+    height: 100px;
+    top: 55%;
+    left: 34%;
+    animation: move 40s -21s infinite ease-in-out alternate;
+    border-radius: 50px;
+}
+.div7 {
+    display: flex;
+    mix-blend-mode: color;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(109, 70, 116, 0.8), rgba(255, 255, 255, 0.8));
+    width: 100px;
+    filter: blur(8px);
+    height: 100px;
+    top: 50%;
+    left: 77%;
+    animation: move2 40s -23s infinite ease-in-out alternate-reverse;
+    border-radius: 50px;
+}
+.div8 {
+    display: flex;
+    mix-blend-mode: color;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(5, 0, 82, 0.8), rgba(120,0,168,0.8));
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    filter: blur(8px);
+    right: 39%;
+    animation: move2 40s -11s infinite ease-in-out alternate-reverse;
+    border-radius: 50px;
+}
+.div4:hover {
     animation: rotate2 5s infinite;
 }
+
 .let {
-    color: white;
-    font-size: 2vw;
+    color: transparent;
+    font-size: 2rem;
     word-wrap: normal;
     overflow-wrap: break-word;
 }
@@ -102,3 +191,22 @@ div {
     }
     
 }
+
+@keyframes move {
+    from{
+        transform: rotate(0deg) scale(0.9) translateX(-50px);
+    }
+    to {
+        transform: rotate(360deg) scale(1.2) translateX(-100px);
+    }
+}
+@keyframes move2 {
+    from{
+        transform: rotate(0deg) scale(0.7) translateX(-20px);
+    }
+    to {
+        transform: rotate(340deg) scale(1.2) translateX(-110px);
+    }
+}
+
+/*mix-blend-mode: screen;*/
