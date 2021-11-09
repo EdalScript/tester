@@ -14,23 +14,40 @@ body {
     filter:saturate(50%);
 
 }
-.table {
+.card {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     height: 60vh;
     width: 60%;
+    min-width: 600px;
     background-image:linear-gradient(90deg, rgba(118, 0, 134,0.9), rgba(9, 1, 104,0.7));
     border-radius: 15px;
     z-index: 1;
-    top: 50%;
+    top: 8.5rem;
     margin-left: 20%;
-    transform: translateY(-50%);
     box-shadow: 5px 10px 10px rgba(9,9,9,0.3);
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
-.table:hover{
-    animation: rotate 1s ease;
+
+.card:hover{
+    display: flex;
+    position: absolute;
+    animation: rotate 1s ease-in-out;
+    transform: scaleX(-1);
+    transform: rotateY(-180deg);
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+
+.inner-card{
+  width: auto;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
 }
 .div2,
 .div3,
@@ -47,45 +64,40 @@ body {
     height: 100px;
     mix-blend-mode: color;
     border-radius: 50px;
+    filter: blur(5px);
 }
 .div2 {
     background: linear-gradient(rgba(0, 59, 168, 0.8), rgba(120, 0, 168, 0.8));
     top: 10%;
     left: 47%;
     animation: move 40s -13s infinite ease-in-out alternate;
-    filter: blur(5px)
 }
 .div3 {
     background: linear-gradient(rgba(103, 209, 41, 0.8), rgba(120,0,168,0.8));
     top: 50%;
     left: 35%;
     animation: move 40s -10s infinite ease-in-out alternate;
-    filter: blur(5px)
 }
 .div4 {
     background: linear-gradient(rgba(131, 0, 0, 0.8), rgba(120,0,168,0.8));
     top: 55%;
-    filter: blur(5px);
     left: 49%;
     animation: move 40s -14s infinite ease-in-out alternate-reverse;
 }
 .div5 {
     background: linear-gradient(rgba(175, 149, 1, 0.8), rgba(120,0,168,0.8));
-    filter: blur(8px);
     top: 43%;
     left: 60%;
     animation: move 40s -23s infinite ease-in-out alternate;
 }
 .div6 {
     background: linear-gradient(rgba(48, 137, 172, 0.8), rgba(120,0,168,0.8));
-    filter: blur(8px);
     top: 55%;
     left: 34%;
     animation: move 40s -21s infinite ease-in-out alternate;
 }
 .div7 {
     background: linear-gradient(rgba(109, 70, 116, 0.8), rgba(255, 255, 255, 0.8));
-    filter: blur(8px);
     top: 50%;
     left: 77%;
     animation: move2 40s -23s infinite ease-in-out alternate-reverse;
@@ -93,7 +105,6 @@ body {
 .div8 {
     background: linear-gradient(rgba(5, 0, 82, 0.8), rgba(120,0,168,0.8));
     top: 10%;
-    filter: blur(8px);
     right: 39%;
     animation: move2 40s -11s infinite ease-in-out alternate-reverse;
 }
