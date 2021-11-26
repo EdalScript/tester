@@ -14,7 +14,8 @@ body {
     filter:saturate(50%);
 
 }
-.card {
+
+.card-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,26 +30,23 @@ body {
     margin-left: 20%;
     box-shadow: 5px 10px 10px rgba(9,9,9,0.3);
     perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.card:hover{
-    display: flex;
-    position: absolute;
-    animation: rotate 1s ease-in-out;
-    transform: scaleX(-1);
-    transform: rotateY(-180deg);
-    perspective: 1000;
+    transition: all 2s;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
-.inner-card{
-  width: auto;
-  height: auto;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  
+.card-back{
+    transform:rotateY(180deg);
 }
+  
+.card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+  
+.card:hover .card-back {
+    transform: rotateY(0);
+}
+
 .div2,
 .div3,
 .div4,
@@ -113,7 +111,12 @@ body {
 .name,
 .number,
 .logo,
-.chip {
+.chip,
+.title-back,
+.number-back,
+.number-back2,
+.info-back
+ {
     font-family: 'Maven Pro', sans-serif;
     color: white;
     word-wrap: normal;
@@ -127,13 +130,30 @@ body {
     top: 1.5rem;
     left: 2rem;
 }
+.title-back{
+    top: 6rem;
+    left: 2rem;
+}
 .name {
     left: 2rem;
+}
+.info-back {
+    right: 2rem;
+    font-size: 1rem;
+    bottom: 1rem;
 }
 .number {
     left: 2rem;
     bottom: 1rem;
     width: 500px;
+}
+.number-back {
+    left:2rem;
+    bottom: 3rem;
+}
+.number-back2{
+    left:2rem;
+    bottom:5rem;
 }
 .logo {
     top: 0.2rem;
@@ -141,6 +161,18 @@ body {
     color:rgba(255, 255, 255, 0.8);
     width: 150px;
     height: 150px;
+}
+.stripe{
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 2rem;
+    left: 0px;
+    width: 100%;
+    object-fit: contain;
+    height: 5rem;
+    background-color: black;
 }
 /*
 .chip {
