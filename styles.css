@@ -21,13 +21,13 @@ body {
     justify-content: center;
     position: absolute;
     height: 60vh;
-    width: 60%;
-    min-width: 600px;
+    width: 50%;
+    min-width: 400px;
     background-image:linear-gradient(90deg, rgba(118, 0, 134,0.9), rgba(9, 1, 104,0.7));
     border-radius: 15px;
     z-index: 1;
     top: 8.5rem;
-    margin-left: 20%;
+    margin-left: 25%;
     box-shadow: 5px 10px 10px rgba(9,9,9,0.3);
     perspective: 1000px;
     transition: all 2s;
@@ -97,7 +97,7 @@ body {
 .div7 {
     background: linear-gradient(rgba(109, 70, 116, 0.8), rgba(255, 255, 255, 0.8));
     top: 50%;
-    left: 77%;
+    left: 70%;
     animation: move2 40s -23s infinite ease-in-out alternate-reverse;
 }
 .div8 {
@@ -133,6 +133,7 @@ body {
 .title-back{
     top: 6rem;
     left: 2rem;
+    font-size: 1.7rem;
 }
 .name {
     left: 2rem;
@@ -149,11 +150,13 @@ body {
 }
 .number-back {
     left:2rem;
-    bottom: 3rem;
+    bottom: 4rem;
+    font-size: 1.5rem;
 }
 .number-back2{
     left:2rem;
-    bottom:5rem;
+    bottom:6.5rem;
+    font-size: 1.5rem;
 }
 .logo {
     top: 0.2rem;
