@@ -2,6 +2,6 @@
 
 ### The purpose of this project is to fully animate and design a nice looking debit/credit card for a fictional bank. 
 
-### Made 100% with raw CSS 
+### Made with 100% CSS 
 
 ### Check it out here! https://edalscript.github.io/tester/
