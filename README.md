@@ -4,4 +4,4 @@
 
 ### Made with 100% CSS 
 
-### Check it out here! https://edalscript.github.io/tester/
+### Check it out ---> https://edalscript.github.io/tester/
